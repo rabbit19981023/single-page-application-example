@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Single Page Application Example</title>
+
+  <style type="text/css">
+
+    .nav {
+      text-align: center;
+      font-size: 24px;
+      margin: 2rem;
+    }
+
+    .nav > * {
+      margin: 0 1rem;
+    }
+
+    .view img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="view"></div>
+
+  <script type="module" src="./builders/build-navbar.js"></script>
+  <script type="module" src="./router.js"></script>
+</body>
+</html>
