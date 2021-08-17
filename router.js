@@ -39,8 +39,8 @@ const buildRouter = function () {
         let cachedView = cachedViews[identifier]
 
         if (!cachedView) {
-          cachedView = currentRoute.view.getView()
-          cachedViews[identifier] = cachedView
+          cachedViews[identifier] = currentRoute.view.getView()
+          cachedView = cachedViews[identifier]
         }
 
         return cachedView

@@ -20,7 +20,7 @@ class Store {
     this.content = container
   }
 
-  // only be called once while cachedView not yet exist.
+  // only be called once while cachedViews[identifier] not yet exist.
   getView() {
     this.build()
     return this.content

@@ -1,6 +1,7 @@
 /**
  * 
- * Deprecated:
+ *                  Deprecated!!!
+ * 
  * This include-html functionality may cause some
  * Race Condition problem that makes other DOM
  * Operations failed!
@@ -9,9 +10,10 @@
  * the same purpose.
  * 
  * You can check `/components/navbar.js` & `/builders/build-navbar.js`,
- * to understand how I implement the functionality.
+ * to understand how I re-implement the functionality.
  * 
  * **/
+
 const include = async function () {
   try {
     const div = document.querySelector('[include-html]')
