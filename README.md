@@ -6,7 +6,7 @@ Main Goals:
 2. Cached Views
 
 ### Usage
-you will need a **web server** to run this example. For this case, we use a npm package named `http-server`.
+You will need a **web server** to run this example. For this case, we use a npm package named `http-server`.
 
 ```bash
 $ cd /path/to/single-page-application-example
@@ -19,5 +19,5 @@ Available on:
 Hit CTRL-C to stop the server
 ```
 
-- just open your browser with url `localhost:8080`
+Just open your browser with url `localhost:8080`
 
