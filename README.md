@@ -2,7 +2,7 @@
 
 build your own Single Page Application(SPA) without any framework, just by Vanilla HTML/CSS/JavaScript !
 
-Main Goals:
+### Main Goals:
 
 1. Routes Mapping
 
