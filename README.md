@@ -1,14 +1,14 @@
-## single-page-application-example
+# single-page-application-example
 
-build your own Single Page Application(SPA) without any framework, just by Vanilla HTML/CSS/JavaScript !
+Build your own Single Page Application(SPA) without any framework, just by Vanilla HTML/CSS/JavaScript !
 
-### Main Goals:
+## Main Goals:
 
 1. Routes Mapping
 
 2. Cached Views
 
-### Usage
+## Usage
 
 You will need a **web server** to run this example. For this case, we use a npm package named `http-server`:
 
