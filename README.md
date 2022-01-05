@@ -14,8 +14,8 @@ You will need a **web server** to run this example. For this case, we use a npm 
 
 ```bash
 $ cd /path/to/single-page-application-example
-$ npm install http-server
-$ ./node_modules/http-server/bin/http-server
+$ npm install
+$ npm run serve
 
 Starting up http-server, serving ./
 Available on:
