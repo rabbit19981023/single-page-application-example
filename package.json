@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "serve": "./node_modules/http-server/bin/http-server"
+  },
   "dependencies": {
     "http-server": "^13.0.0"
   }

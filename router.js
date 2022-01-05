@@ -12,29 +12,43 @@ const Routes = [
 // Cached View Content
 const cachedViews = { }
 
-const buildRouter = function () {
-  const router = function (event) {
-    const preventReloadPage = function () {
+const main = function () {
+  const router = buildRouter(Routes)
+  registerRouting(router)
+}()
+
+function buildRouter (routes) {
+  function router(event) {
+    preventReloadPage()
+    updateHistory()
+    render()
+
+    function preventReloadPage() {
       event.preventDefault()
     }
 
-    const updateHistory = function () {
+    function updateHistory() {
       const url = event.target.href
       window.history.pushState(null, 'view changed', url)
     }
 
-    const render = function () {
-      const currentRoute = Routes.find(route => route.path === window.location.pathname)
+    function render() {
+      const currentRoute = routes.find(route => route.path === window.location.pathname)
+      const title = getTitle()
+      const view = getView()
 
-      const getTitle = function () {
+      setTitle(title)
+      renderView(view)
+
+      function getTitle() {
         return currentRoute.view.title
       }
 
-      const setTitle = function (title) {
+      function setTitle(title) {
         document.title = title
       }
 
-      const getView = function () {
+      function getView() {
         const identifier = currentRoute.view.identifier
         let cachedView = cachedViews[identifier]
 
@@ -46,7 +60,7 @@ const buildRouter = function () {
         return cachedView
       }
 
-      const renderView = function (view) {
+      function renderView(view) {
         const viewContainer = document.querySelector('.view')
 
         viewContainer.empty = function () {
@@ -58,28 +72,15 @@ const buildRouter = function () {
         viewContainer.empty()
         viewContainer.appendChild(view)
       }
-
-      const title = getTitle()
-      setTitle(title)
-
-      const view = getView()
-      renderView(view)
     }
-
-    preventReloadPage()
-    updateHistory()
-    render()
   }
 
   return router
 }
 
-const registerRouting = function (router) {
+function registerRouting(router) {
   const links = document.querySelectorAll('a')
   links.forEach(link => {
     link.addEventListener('click', router)
   })
 }
-
-const router = buildRouter()
-registerRouting(router)
