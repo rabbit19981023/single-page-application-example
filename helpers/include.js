@@ -24,7 +24,7 @@ const include = async function () {
     const result = await response.text()
     div.innerHTML = result
 
-    // re-call itself until an error occured
+    // re-call itself until inclued-html not found
     include()
   } catch (err) {
     // there's no include-html found, exit the function
